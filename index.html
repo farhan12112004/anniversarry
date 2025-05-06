@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Special Anniversary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <!-- Confetti Background -->
+    <!-- Overlay Start Screen -->
+    <div
+      id="start-overlay"
+      class="fixed inset-0 bg-pink-200 bg-opacity-95 z-50 flex flex-col items-center justify-center text-center transition-opacity duration-700"
+    >
+      <h1 class="text-3xl md:text-5xl font-bold text-pink-700 mb-2">
+        Special for the most beautiful girl in the world
+      </h1>
+      <h1 class="text-lg md:text-5xl font-bold text-pink-700 mb-6">
+        Nazla Rahmadani 💖
+      </h1>
+
+      <button
+        id="start-btn"
+        class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-xl text-lg shadow-lg transition"
+      >
+        Start
+      </button>
+    </div>
+
+    <!-- Audio -->
+    <audio id="song" src="musik/musik.mp3" preload="auto"></audio>
+
+    <div
+      id="confetti-container"
+      class="fixed inset-0 overflow-hidden pointer-events-none z-0"
+    ></div>
+
+    <!-- Header Section -->
+    <header class="relative py-20 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-pink-100 to-purple-100 opacity-60"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col items-center justify-center text-center">
+          <div class="floating mb-8">
+            <svg
+              class="w-24 h-24 text-pink-500 heartbeat"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <h1
+            class="text-5xl md:text-7xl font-bold text-pink-700 mb-6 title-font fade-in"
+          >
+            Happy Anniversary
+          </h1>
+          <p class="text-xl md:text-2xl text-pink-600 mb-8 max-w-2xl mx-auto">
+            Celebrating
+            <span id="years-together" class="font-bold text-3xl text-pink-700"
+              >0</span
+            >
+            Wonderful Years Together
+          </p>
+          <div class="flex space-x-4">
+            <div class="w-12 h-1 bg-pink-300"></div>
+            <div class="w-12 h-1 bg-pink-400"></div>
+            <div class="w-12 h-1 bg-pink-500"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"
+      ></div>
+    </header>
+
+    <!-- Countdown Section -->
+    <section class="py-16 relative">
+      <div class="container mx-auto px-6">
+        <div
+          class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden"
+        >
+          <div class="md:flex">
+            <div
+              class="md:w-1/2 bg-gradient-to-br from-pink-500 to-purple-600 p-12 flex items-center justify-center"
+            >
+              <div class="text-center">
+                <h2 class="text-3xl font-bold text-white mb-6 title-font">
+                  Our Next Anniversary
+                </h2>
+                <div class="w-24 h-1 bg-white bg-opacity-50 mx-auto mb-8"></div>
+                <p class="text-white text-opacity-90 mb-8">
+                  Counting down to another year of love and happiness
+                </p>
+                <svg
+                  class="w-16 h-16 text-white mx-auto opacity-80 floating"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="md:w-1/2 p-12">
+              <div class="grid grid-cols-2 gap-8 text-center">
+                <div>
+                  <div class="text-5xl font-bold text-pink-600 mb-2" id="days">
+                    00
+                  </div>
+                  <div class="text-sm uppercase tracking-wider text-gray-500">
+                    Days
+                  </div>
+                </div>
+                <div>
+                  <div class="text-5xl font-bold text-pink-600 mb-2" id="hours">
+                    00
+                  </div>
+                  <div class="text-sm uppercase tracking-wider text-gray-500">
+                    Hours
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="text-5xl font-bold text-pink-600 mb-2"
+                    id="minutes"
+                  >
+                    00
+                  </div>
+                  <div class="text-sm uppercase tracking-wider text-gray-500">
+                    Minutes
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="text-5xl font-bold text-pink-600 mb-2"
+                    id="seconds"
+                  >
+                    00
+                  </div>
+                  <div class="text-sm uppercase tracking-wider text-gray-500">
+                    Seconds
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-20 bg-gradient-to-b from-white to-pink-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-pink-700 mb-4 title-font">
+            Our Journey
+          </h2>
+          <div class="w-24 h-1 bg-pink-300 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Photos will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Love Message -->
+    <section class="py-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-pink-50 opacity-20"></div>
+      <div class="container mx-auto px-6 relative">
+        <div class="max-w-4xl mx-auto">
+          <div class="message-box rounded-2xl shadow-2xl overflow-hidden">
+            <div class="p-12">
+              <div class="flex justify-center mb-8">
+                <svg
+                  class="w-12 h-12 text-pink-500 heartbeat"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-3xl font-bold text-center text-pink-700 mb-8 title-font"
+              >
+                To My Beloved
+              </h3>
+              <p
+                id="anniversary-message"
+                class="text-lg text-gray-700 text-center leading-relaxed"
+              >
+                <!-- Message will be filled by JavaScript -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music Player -->
+    <!-- <section class="py-20 bg-white">
+      
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="py-12 bg-pink-700 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <p class="mb-6">
+          Made with <i class="fas fa-heart text-red-300 heartbeat mx-1"></i> for
+          Nazla Rahmadani
+        </p>
+        <p class="text-sm text-pink-200">
+          © <span id="current-year"></span> Your Boyfie
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
