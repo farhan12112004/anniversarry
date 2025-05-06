@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
       caption: "Mountain Date",
     },
     {
-      url: "img/runningDate.jpg",
+      url: "img/RunningDate.jpg",
       caption: "Running Date",
     },
     {
