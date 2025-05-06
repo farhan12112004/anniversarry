@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Set anniversary date (YYYY, MM-1, DD)
-  const anniversaryDate = new Date(2023, 4, 9); // May 9, 2023 (month is 0-indexed)
+  const anniversaryDate = new Date(2024, 4, 9); // May 9, 2023 (month is 0-indexed)
   const today = new Date();
 
   // Set current year in footer
