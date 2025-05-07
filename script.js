@@ -150,6 +150,42 @@ document.addEventListener("DOMContentLoaded", function () {
       url: "img/newYearDate.jpg",
       caption: "New Year Date",
     },
+    {
+      url: "img/lakeSideDate.jpg",
+      caption: "Lakeside Date",
+    },
+    {
+      url: "img/iceCreamDate.jpg",
+      caption: "Ice Cream Date",
+    },
+    {
+      url: "img/rawrStyle.jpg",
+      caption: "Rawr Style",
+    },
+    {
+      url: "img/ourEidMubarrak.jpg",
+      caption: "Our Eid Mubarrak",
+    },
+    {
+      url: "img/cafeDate.jpg",
+      caption: "Cafe Date",
+    },
+    {
+      url: "img/udonDate.jpg",
+      caption: "Udon Date",
+    },
+    {
+      url: "img/reddogDate.jpg",
+      caption: "Reddog Date",
+    },
+    {
+      url: "img/mirrorStyle.jpg",
+      caption: "Mirror Style",
+    },
+    {
+      url: "img/ourEyes.jpg",
+      caption: "Our Eyes",
+    },
   ];
 
   const gallery = document.querySelector(
