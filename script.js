@@ -172,19 +172,27 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       url: "img/udonDate.jpg",
-      caption: "Udon Date",
+      caption: "",
     },
     {
       url: "img/reddogDate.jpg",
-      caption: "Reddog Date",
+      caption: "",
     },
     {
       url: "img/mirrorStyle.jpg",
       caption: "Mirror Style",
     },
     {
+      url: "img/flower.jpg",
+      caption: "",
+    },
+    {
       url: "img/ourEyes.jpg",
       caption: "Our Eyes",
+    },
+    {
+      url: "img/haircutDate.jpg",
+      caption: "Haircut Date",
     },
   ];
 
